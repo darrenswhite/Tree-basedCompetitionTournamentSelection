@@ -44,7 +44,6 @@ import java.util.function.Predicate;
  * Setting the score of the current match is to keep the current match stored
  * and later set the score values for each node and then move the winner player
  * to the parent node.
- * <p>
  *
  * @author Darren White
  */
@@ -187,10 +186,10 @@ public class BTSingleElimDaw48 implements IManager {
 	 * A queue is then used to store which matches will be played by simply
 	 * storing the index of each node in reverse order (excluding the root).
 	 *
-	 * @param competitors The list of competitors to add to the tree
+	 * @param players The list of players to add to the tree
 	 */
-	private void buildTree(List<String> competitors) {
-		int numPlayers = competitors.size();
+	private void buildTree(List<String> players) {
+		int numPlayers = players.size();
 		int treeHeight = (int) Math.ceil(Math.log(numPlayers) / Math.log(2));
 		int nodesToAdd = (int) Math.pow(2, treeHeight) - 2;
 
@@ -202,11 +201,11 @@ public class BTSingleElimDaw48 implements IManager {
 		int totalPlayers = numPlayers - extraPlayers;
 
 		for (int i = 0; i < totalPlayers - 1; i++) {
-			addPlayers(root, competitors.get(i++), competitors.get(i));
+			addPlayers(root, players.get(i++), players.get(i));
 		}
 
 		for (int i = totalPlayers; i < numPlayers; i++) {
-			getEmptyLeaf().player = competitors.get(i);
+			getEmptyLeaf().player = players.get(i);
 		}
 
 		int totalNodes = (int) (Math.pow(2, treeHeight + 1) - 2 - extraPlayers * 2);
@@ -360,7 +359,7 @@ public class BTSingleElimDaw48 implements IManager {
 	@Override
 	public void setPlayers(List<String> players) {
 		if (players.size() < 2) {
-			System.err.println("Must have at least two competitors!");
+			System.err.println("Must have at least two players!");
 			return;
 		}
 
