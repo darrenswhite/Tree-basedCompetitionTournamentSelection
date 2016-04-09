@@ -44,6 +44,23 @@ import java.util.function.Predicate;
  * Setting the score of the current match is to keep the current match stored
  * and later set the score values for each node and then move the winner player
  * to the parent node.
+ * <p>
+ * Correct functionality (60%): The program has the correct functionality
+ * with all methods implemented from IManager and work as expected. I would
+ * award myself 50 marks for this section as the methods work as expected
+ * but are not perfect as I believe they could be more efficient.
+ * <p>
+ * Class structure (20%): I believe that this single class has a clear
+ * structure with apprioate fields and methods where needed. All of
+ * the code is properly labelled, documented and easy to read. For this
+ * section I would award myself 15 marks as some variables could have
+ * used better naming.
+ * <p>
+ * Documentation (20%): The documentation contains detailed descriptions
+ * of the algorithm used and is correctly formatted JavaDoc. I would
+ * award myself 15 marks for this section due to no references cited.
+ * <p>
+ * Overall I would award myself 80 marks.
  *
  * @author Darren White
  */
