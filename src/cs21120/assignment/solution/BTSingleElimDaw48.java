@@ -51,7 +51,7 @@ import java.util.function.Predicate;
  * but are not perfect as I believe they could be more efficient.
  * <p>
  * Class structure (20%): I believe that this single class has a clear
- * structure with apprioate fields and methods where needed. All of
+ * structure with appropriate fields and methods where needed. All of
  * the code is properly labelled, documented and easy to read. For this
  * section I would award myself 15 marks as some variables could have
  * used better naming.
@@ -308,7 +308,7 @@ public class BTSingleElimDaw48 implements IManager {
 	}
 
 	/**
-	 * Gets the player at the given index position in the competiton tree
+	 * Gets the player at the given index position in the competition tree
 	 *
 	 * @param n The index to get the node at
 	 * @return The node at the index
@@ -387,7 +387,7 @@ public class BTSingleElimDaw48 implements IManager {
 	 * Calculates the size of the tree given. A minimum of 1 will be returned.
 	 * All children of the node will add 1 to the total size.
 	 *
-	 * @param node The node to calulcate the size of
+	 * @param node The node to calculate the size of
 	 * @return The size of the node and its children
 	 */
 	private int size(BinaryTreeImpl node) {
